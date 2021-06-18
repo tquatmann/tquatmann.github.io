@@ -1,0 +1,39 @@
+---
+---
+{{ reference }}
+<br>
+{% if link %}
+<a href="{{link}}" target="_blank">
+	<img alt="{{key}}.pdf" src="https://img.shields.io/static/v1?label=pdf&message={{key}}.pdf&color=orange">
+</a>
+{% endif %}	
+
+{% if entry.doi %}
+<a href="http://dx.doi.org/{{entry.doi}}" target="_blank">
+	<img alt="DOI: {{entry.doi}}" src="https://img.shields.io/static/v1?label=doi&message={{entry.doi}}&color=blue">
+</a>
+{% else if entry.url %}
+<a href="{{entry.url}}" target="_blank">
+	<img alt="URL" src="https://img.shields.io/static/v1?label=url&message={{entry.url}}&color=blueviolet">
+</a>
+{% endif %}
+{% if entry.arxiv-id %}
+<a href="https://arxiv.org/abs/{{entry.arxiv-id}}" target="_blank">
+	<img alt="arXiv: {{entry.arxiv-id}}" src="https://img.shields.io/static/v1?label=arXiv&message={{entry.arxiv-id}}&color=A42C25">
+</a>
+{% endif %}
+{% if entry.artifact-url %}
+<a href="{{entry.artifact-url}}" target="_blank">
+	<img alt="Artifact Evaluated" src="https://img.shields.io/static/v1?label=&message=artifact&color=889900">
+</a>
+{% endif %}
+{% if entry.material %}
+<a href="{{entry.material}}" target="_blank">
+	<img alt="supplemental material" src="https://img.shields.io/static/v1?label=&message=supplemental material&color=ff00ff">
+</a>
+{% endif %}
+{% if entry.further-info %}
+<a href="{{entry.further-info}}" target="_blank">
+	<img alt="further information" src="https://img.shields.io/static/v1?label=&message=further information&color=009999">
+</a>
+{% endif %}
