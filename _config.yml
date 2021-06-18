@@ -42,7 +42,7 @@ plugins:
 scholar:
   bibliography_template: bib
   style: _bibliography/customstyle
-  repository: _bibliography/download
+  repository: download
 
 exclude:
   - README.md
